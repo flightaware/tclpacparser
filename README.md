@@ -59,9 +59,24 @@ Returns an empty string if the method fails for any reason.
 
 * **pacparser set_my_ip** *ip*
 
-* pacparser cleanup
+* **pacparser cleanup**
 
 Cleanup the pacparser library.
+
+Example
+---
+
+```tcl
+pacparser init
+
+set fp [open pacfile]
+pacparser parse_pac [read $fp]
+close $fp
+
+puts [pacparser find_proxy "http://google.com/" google.com]
+
+pacparser cleanup
+```
 
 Bugs
 ---
