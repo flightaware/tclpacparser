@@ -2,4 +2,4 @@
 # Tcl package index file for pacparser @PACKAGE_VERSION@
 #
 package ifneeded pacparser @PACKAGE_VERSION@ \
-    [list load [file join $dir @PKG_LIB_FILE@]]
+    [list load [file join $dir @PKG_LIB_FILE@]]\n[list source [file join $dir pacparser.tcl]]
